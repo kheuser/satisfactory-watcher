@@ -49,3 +49,17 @@ RestartSec=5
 [Install]
 WantedBy=multi-user.target
 ```
+
+### Enable and start the service:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now satisfactory-watcher
+```
+
+### Check logs
+```bash
+journalctl -u satisfactory-watcher -f
+```
+
+#### License
+MIT
